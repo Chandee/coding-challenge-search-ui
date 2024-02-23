@@ -1,23 +1,25 @@
-import React from 'react';
+import React from "react";
+import Search from "./components/Search";
 
 type SearchResult = {
   id: string;
   title: string;
   url: string;
   description: string;
-  category: 'VIDEOS' | 'PLAYLISTS' | 'BLOG_POSTS';
+  category: "VIDEOS" | "PLAYLISTS" | "BLOG_POSTS";
 };
 
 function App() {
-
-    return (
-        <div className="App">
-            <header className="App-header">
-                <h1>Search UI Challenge</h1>
-                [Your UI here]
-            </header>
-        </div>
-    );
+  return (
+    <div>
+      <header className="mb-10 mt-20">
+        <h1 className="text-5xl text-center">Search UI Challenge</h1>
+      </header>
+      <main>
+        <Search />
+      </main>
+    </div>
+  );
 }
 
 export default App;
