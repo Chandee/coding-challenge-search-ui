@@ -11,7 +11,7 @@ type SearchResult = {
 };
 
 type ListTopicsType = {
-  topics: SearchResult[];
+  topics: SearchResult[] | undefined;
   isPending: boolean;
   error: Error | null;
 };
@@ -26,7 +26,11 @@ const ListTopics = ({ topics, isPending, error }: ListTopicsType) => {
 
   if (isPending) {
     return (
-      <div className="max-w-[500px] m-auto mt-4 h-28">
+      <div
+        className="max-w-[500px] m-auto mt-4 h-28"
+        aria-label="loading"
+        data-testid="loading"
+      >
         <Skeleton className="h-full" />
       </div>
     );
