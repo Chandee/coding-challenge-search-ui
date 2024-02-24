@@ -1,6 +1,6 @@
 import React from "react";
 import Search from "./components/Search";
-import { QueryClient, QueryClientProvider } from "react-query";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 type SearchResult = {
   id: string;
