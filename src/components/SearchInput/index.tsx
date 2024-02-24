@@ -1,6 +1,8 @@
-import { useRef } from "react";
-
-const SearchInput = ({ refetch, inputRef }: any) => {
+type SearchInput = {
+  refetch: () => void;
+  inputRef: React.LegacyRef<HTMLInputElement> | null;
+};
+const SearchInput = ({ refetch, inputRef }: SearchInput) => {
   const onSearchSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
     refetch();
