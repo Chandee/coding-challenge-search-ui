@@ -1,9 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import SearchInput from "../SearchInput";
 import ListTopics from "../ListTopics";
 import { getTopicsData } from "../../utils/request";
 import { useQuery } from "@tanstack/react-query";
-
 
 const Search = () => {
   const inputRef = useRef<HTMLInputElement | null>(null);

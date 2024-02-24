@@ -1,6 +1,4 @@
-import react from "react";
-
-type categoriesType = "VIDEOS" | "PLAYLISTS" | "BLOG_POSTS";
+export type categoriesType = "VIDEOS" | "PLAYLISTS" | "BLOG_POSTS";
 
 type topicType = {
   title: string;

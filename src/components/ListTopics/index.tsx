@@ -1,5 +1,4 @@
-import react from "react";
-import Topic from "../Topic";
+import Topic, { categoriesType } from "../Topic";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
@@ -8,7 +7,7 @@ type SearchResult = {
   title: string;
   url: string;
   description: string;
-  category: "VIDEOS" | "PLAYLISTS" | "BLOG_POSTS";
+  category: categoriesType;
 };
 
 type ListTopicsType = {
