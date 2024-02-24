@@ -17,7 +17,7 @@ const Search = () => {
   return (
     <div>
       <SearchInput inputRef={inputRef} refetch={refetch} />
-      <ListTopics topics={data?.data} isPending={isFetching} />
+      <ListTopics topics={data?.data} isPending={isFetching} error={error} />
     </div>
   );
 };

@@ -14,8 +14,17 @@ type SearchResult = {
 type ListTopicsType = {
   topics: SearchResult[];
   isPending: boolean;
+  error: Error | null;
 };
-const ListTopics = ({ topics, isPending }: ListTopicsType) => {
+const ListTopics = ({ topics, isPending, error }: ListTopicsType) => {
+  if (error) {
+    return (
+      <div className="m-auto mt-4 p-4 text-center">
+        An error occurred in the request, please try again.
+      </div>
+    );
+  }
+
   if (isPending) {
     return (
       <div className="max-w-[500px] m-auto mt-4 h-28">
