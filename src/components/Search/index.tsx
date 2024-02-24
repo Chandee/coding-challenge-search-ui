@@ -16,7 +16,6 @@ const Search = () => {
 
   return (
     <div>
-      <>{console.log("iuiu", isFetching)}</>
       <SearchInput inputRef={inputRef} refetch={refetch} />
       <ListTopics topics={data?.data} isPending={isFetching} />
     </div>
