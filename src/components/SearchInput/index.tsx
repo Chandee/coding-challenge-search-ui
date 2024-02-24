@@ -16,7 +16,7 @@ const SearchInput = ({ refetch, inputRef }: SearchInput) => {
       <input
         ref={inputRef}
         type="text"
-        aria-label="Search"
+        aria-label="Search field"
         className="w-full bg-white/20 py-2 pl-4 pr-4 rounded-lg focus:outline-none border-2 border-gray-200 focus:border-sky-300 transition-colors duration-300"
         placeholder="Search..."
       />
